@@ -9,4 +9,6 @@ jobs:
     
     steps:
       - name: Print branch name
-        run: echo "github.head_ref"
+        env:
+          BRANCH_NAME: ${{ github.head_ref }}
+        run: echo "Branche actuelle => $BRANCH_NAME"
