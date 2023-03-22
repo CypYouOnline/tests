@@ -9,4 +9,4 @@ jobs:
     
     steps:
       - name: Print branch name
-        run: echo ${GITHUB_HEAD_REF}
+        run: echo "${GITHUB_HEAD_REF}"
