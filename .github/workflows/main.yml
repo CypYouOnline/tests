@@ -9,4 +9,4 @@ jobs:
     
     steps:
       - name: Print branch name
-        run: echo "Branche actuelle => $Env:GITHUB_BASE_REF"
+        run: echo "Branche actuelle => $GITHUB_REF_NAME"
