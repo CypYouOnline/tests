@@ -9,6 +9,4 @@ jobs:
     
     steps:
       - name: Print branch name
-        env:
-          BRANCH_NAME: ${{ env.ref_name }}
-        run: echo "Branche actuelle => $BRANCH_NAME"
+        run: echo "Branche actuelle => $Env:GITHUB_BASE_REF"
