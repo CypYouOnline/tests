@@ -1,0 +1,17 @@
+name: test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # extract branch name
+      - name: Extract branch name
+        env:
+          BRANCH_NAME: ${GITHUB_HEAD_REF}
+
+      - name: Print branch name
+        if: github.event_name == 'pull_request'
+        run: echo ${GITHUB_REF}
